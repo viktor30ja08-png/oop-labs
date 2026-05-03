@@ -37,7 +37,6 @@ class TestStringOperations(unittest.TestCase):
 
     def test_sort_words_by_vowels(self):
         """Перевірка правильності сортування слів"""
-        # Слово "а" має 1 голосну, "б" - 0, "ааа" - 3
         words = [list("ааа"), list("б"), list("а")]
         expected = [list("б"), list("а"), list("ааа")]
 

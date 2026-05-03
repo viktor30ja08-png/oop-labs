@@ -1,11 +1,10 @@
 def is_vowel(char):
-    """Перевіряє, чи є символ голосною літерою (підтримує українську та англійську)."""
     vowels = "аеєиіїоуюяaeiouyАЕЄИІЇОУЮЯAEIOUY"
     return char in vowels
 
 
 def count_vowels(word_chars):
-    """Рахує кількість голосних у слові (слово передається як список символів)."""
+
     count = 0
     for char in word_chars:
         if is_vowel(char):
@@ -14,21 +13,17 @@ def count_vowels(word_chars):
 
 
 def extract_words(text_chars):
-    """
-    Виділяє слова з тексту посимвольно (без використання методу split).
-    text_chars - це список символів (імітація StringBuffer).
-    """
+
     words = []
     current_word = []
 
     for char in text_chars:
-        if char.isalpha():  # Якщо символ є літерою, додаємо до поточного слова
+        if char.isalpha():
             current_word.append(char)
-        elif current_word:  # Якщо натрапили на пробіл/розділовий знак, і слово не порожнє
+        elif current_word:
             words.append(current_word)
-            current_word = []  # Очищуємо для наступного слова
+            current_word = []
 
-    # Додаємо останнє слово, якщо текст закінчується літерою
     if current_word:
         words.append(current_word)
 
@@ -36,9 +31,7 @@ def extract_words(text_chars):
 
 
 def sort_words_by_vowels(words):
-    """
-    Сортує список слів за зростанням кількості голосних літер (сортування бульбашкою).
-    """
+
     n = len(words)
     for i in range(n - 1):
         for j in range(n - i - 1):
