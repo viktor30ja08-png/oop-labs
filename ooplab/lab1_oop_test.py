@@ -1,5 +1,5 @@
 import unittest
-from ooplab.lab1_oop import validate_matrix, multiply_matrix_by_scalar, get_sum_of_min_in_columns
+from lab1_oop import validate_matrix, multiply_matrix_by_scalar, get_sum_of_min_in_columns
 
 
 class TestMatrixOperations(unittest.TestCase):
