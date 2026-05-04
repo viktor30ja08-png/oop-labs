@@ -133,7 +133,6 @@ def main():
 
     print("Original Input:")
     print(input_data)
-    print("\nProcessing...\n")
 
     text_object = Text(input_data)
 
