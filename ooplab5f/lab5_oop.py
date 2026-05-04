@@ -112,7 +112,7 @@ class Playroom:
 def main():
     try:
 
-        room = Playroom(budget=200.00)
+        room = Playroom(budget=100.00)
 
         small_car = Car("Hot Wheels Fast", 15.50, 3, 7, "small")
         large_car = Car("RC Monster Truck", 45.00, 8, 14, "large")
