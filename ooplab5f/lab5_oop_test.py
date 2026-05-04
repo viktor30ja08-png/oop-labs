@@ -46,7 +46,6 @@ class TestPlayroom(unittest.TestCase):
         self.room.add_toy(self.doll)   # 15.0
         self.room.add_toy(self.blocks)  # 25.0
 
-        # Search between 12.0 and 20.0
         found = self.room.find_toys_in_price_range(12.0, 20.0)
 
         self.assertEqual(len(found), 1)
