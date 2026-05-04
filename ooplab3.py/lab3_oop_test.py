@@ -14,7 +14,7 @@ class TestEducationalInstitution(unittest.TestCase):
         self.institutions = [self.inst1, self.inst2, self.inst3]
 
     def test_equality(self):
-        """Перевірка правильного порівняння об'єктів (перевизначений __eq__)"""
+
         identical_inst = EducationalInstitution(
             "Університет А", 4, 10000, 1900, True)
         different_inst = EducationalInstitution(
@@ -27,10 +27,10 @@ class TestEducationalInstitution(unittest.TestCase):
 
         sorted_list = sort_institutions(self.institutions)
 
-        self.assertEqual(sorted_list[0].name, "Коледж В")     # Акредитація 2
-        # Акредитація 4, Студентів 20000
+        self.assertEqual(sorted_list[0].name, "Коледж В")
+
         self.assertEqual(sorted_list[1].name, "Університет Б")
-        # Акредитація 4, Студентів 10000
+
         self.assertEqual(sorted_list[2].name, "Університет А")
 
     def test_find_existing_institution(self):

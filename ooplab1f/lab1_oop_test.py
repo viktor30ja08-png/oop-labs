@@ -14,7 +14,7 @@ class TestMatrixOperations(unittest.TestCase):
         self.scalar_a = 3
 
     def test_multiply_matrix_by_scalar(self):
-        """Перевіряємо, чи правильно матриця множиться на число"""
+
         expected_result = [
             [3, -15,  24,  36],
             [12,  6, -30,   9],
@@ -24,18 +24,18 @@ class TestMatrixOperations(unittest.TestCase):
         self.assertEqual(result, expected_result)
 
     def test_get_sum_of_min_in_columns(self):
-        """Перевіряємо, чи правильно рахується сума найменших елементів стовпців"""
+
         matrix_c = multiply_matrix_by_scalar(self.matrix_b, self.scalar_a)
         result = get_sum_of_min_in_columns(matrix_c)
         self.assertEqual(result, -111)
 
     def test_empty_matrix_validation(self):
-        """Перевіряємо, чи спрацьовує помилка при порожній матриці"""
+
         with self.assertRaises(ValueError):
             validate_matrix([])
 
     def test_invalid_shape_matrix(self):
-        """Перевіряємо, чи спрацьовує помилка при нерівних рядках матриці"""
+
         invalid_matrix = [
             [1, 2, 3],
             [4, 5]
