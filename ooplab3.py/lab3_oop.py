@@ -69,9 +69,9 @@ def main():
         idx, found_obj = find_institution(sorted_institutions, target_to_find)
 
         if idx != -1:
-            print(f"✅ Об'єкт знайдено! Індекс у відсортованому масиві: {idx}")
+            print(f" Об'єкт знайдено! Індекс у відсортованому масиві: {idx}")
         else:
-            print("❌ Об'єкт не знайдено.")
+            print(" Об'єкт не знайдено.")
 
     except Exception as e:
         print(f"Виникла помилка: {e}")
